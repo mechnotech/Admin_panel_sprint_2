@@ -89,3 +89,4 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ADMINS_ROWS_PER_PAGE = 20
+API_MOVIES_PER_PAGE = 50
