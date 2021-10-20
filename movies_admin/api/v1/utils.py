@@ -2,14 +2,14 @@ from django.contrib.postgres.aggregates import ArrayAgg
 from django.db.models import Q
 from django.http import JsonResponse
 
-from movies_admin.config.settings.base import API_MOVIES_PER_PAGE
-from movies_admin.movies.models import Filmwork
+from django.conf import settings
+from movies.models import Filmwork
 
 
 class MoviesApiMixin:
     model = Filmwork
     http_method_names = ['get']
-    paginate_by = API_MOVIES_PER_PAGE
+    paginate_by = settings.API_MOVIES_PER_PAGE
 
     def get_queryset(self):
         qs = super(MoviesApiMixin, self).get_queryset()

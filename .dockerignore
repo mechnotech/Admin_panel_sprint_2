@@ -1,5 +1,12 @@
 .idea
 .dockerignore
 .gitignore
-.env
 db.sqlite
+files
+images
+venv
+__pycache__/
+Dockerfile
+README.md
+tasks
+movies_admin/static

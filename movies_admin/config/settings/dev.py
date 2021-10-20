@@ -6,7 +6,7 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('POSTGRES_USER'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-        'HOST': os.getenv('DB_DEV_HOST'),
+        'HOST': os.getenv('DB_HOST'),
         'PORT': 5432,
         'CONN_MAX_AGE': 60,
         'OPTIONS': {
@@ -21,3 +21,4 @@ INSTALLED_APPS += [
 ]
 MIDDLEWARE.append('debug_toolbar.middleware.DebugToolbarMiddleware')
 INTERNAL_IPS = ['127.0.0.1', ]
+
