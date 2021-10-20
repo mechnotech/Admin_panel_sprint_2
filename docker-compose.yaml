@@ -36,7 +36,8 @@ services:
             bash -c "cd movies_admin &&
             python3 manage.py migrate --noinput &&
             python3 manage.py collectstatic --noinput &&
-            gunicorn wsgi:application  --chdir config/ --log-level debug --bind 0.0.0.0:8000"
+            ../upload.sh &&
+            gunicorn wsgi:application  --chdir config/ --log-level info --bind 0.0.0.0:8000"
     depends_on:
       - db
     env_file:
