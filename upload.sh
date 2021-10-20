@@ -1,2 +1,2 @@
-echo "Upload fixtures to Postgres, please wait 30-40 seconds ..." >&1
+echo "Upload fixtures to Postgres, please wait 20-30 seconds ..." >&1
 ./manage.py loaddata ../fixtures.json
