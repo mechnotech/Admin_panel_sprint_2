@@ -51,9 +51,7 @@ services:
     container_name: nginx
     restart: always
     volumes:
-      - type: volume
-        source: static_volume
-        target: /code/movies_admin/static
+      - static_volume:/code/movies_admin/static
       - ./movies_admin/src/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./movies_admin/src/site.conf:/etc/nginx/conf.d/site.conf:ro
     ports:
